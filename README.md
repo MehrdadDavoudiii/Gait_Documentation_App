@@ -84,8 +84,8 @@ https://heibox.uni-heidelberg.de/d/a413ae20c2a34b398926/
 - This app is free to use. If it helps your work, please consider a donation to support students and early‑career researchers:  
   **Recipient:** Gesellschaft der Freunde der Universität Heidelberg e.V.  
   **Bank:** Deutsche Bank Heidelberg  
-  **IBAN:** `DE22 6727 0003 0049 4005 00`  
-  **BIC (SWIFT):** `DEUTDESM672`  
+  **IBAN:** DE22 6727 0003 0049 4005 00  
+  **BIC (SWIFT):** DEUTDESM672 
   **Reference (optional):** *Spende – Förderung Studierende/Promotion*
 
 ---

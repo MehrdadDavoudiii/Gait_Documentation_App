@@ -80,7 +80,7 @@ https://heibox.uni-heidelberg.de/d/a413ae20c2a34b398926/
 - This program is provided **“AS IS,”** without warranty of any kind.
 
 ## 10) Acknowledgments and Donations
-- We gratefully acknowledge the support of the **Gesellschaft der Freunde der Universität Heidelberg e.V. (Society of Friends of Heidelberg University)**.  
+- I gratefully acknowledge the support of the **Gesellschaft der Freunde der Universität Heidelberg e.V. (Society of Friends of Heidelberg University)**.  
 - This app is free to use. If it helps your work, please consider a donation to support students and early‑career researchers:  
   **Recipient:** Gesellschaft der Freunde der Universität Heidelberg e.V.  
   **Bank:** Deutsche Bank Heidelberg  

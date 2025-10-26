@@ -1,11 +1,11 @@
-# Gait Documentation App (Version 1.1.0)
+# Gait Documentation App (Version 1.1)
 ## 1) Overview
 **Gait Documentation App** is free, open-source software for clinical documentation (GNU GPLv3). It provides an intuitive interface to record **patient information**, **examinations**, **interventions**, and **associated files**. The app is offered in two formats: **an installable version** and **a portable (no‑install) version**.
 
 **Safe Download link**:
 https://heibox.uni-heidelberg.de/d/a413ae20c2a34b398926/
 
-
+<img width="128" height="128" alt="Install_QR" src="https://github.com/user-attachments/assets/be81a3ca-a4b4-43a8-b385-bb0f68366038" />
 
 
 ## 2) Key Features

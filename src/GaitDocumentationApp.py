@@ -946,18 +946,16 @@ class PatientApp:
         except Exception as e: messagebox.showerror("Error", f"Could not delete: {e}")
 
     def show_help(self) -> None:
-        """Display a detailed help guide for using the application.
 
-        The help text provides a brief overview of the major features of the
-        program, including adding and editing patients, recording examinations
-        and interventions, attaching files, and navigating the timeline.  The
-        text is displayed in a scrollable window for easy reading.
-        """
         help_win = tk.Toplevel(self.root)
         help_win.title("Help")
         help_win.geometry("650x500")
         help_frame = ttk.Frame(help_win, padding=10)
         help_frame.pack(fill=tk.BOTH, expand=True)
+
+        storage_dir = Path(self.db.db_path).parent
+        attachments_dir = storage_dir / "attachments"
+
         # Compose a comprehensive help message.  Use blank lines to separate
         # sections and bullets to make key actions stand out.  You can adjust
         # this text to better suit your workflow or translate it into another
@@ -1011,8 +1009,8 @@ class PatientApp:
             "   view helps you see the sequence of care over time.\n\n"
             "Backup and data storage:\n"
             " • The application uses a local SQLite database (\"health_records.db\")\n"
-            "   stored Users\...\AppData\Local\GaitDocumentationSystem. Your attachments are\n"
-            "   saved in a subfolder named \"attachments\" next to the database.\n"
+            f"   stored in:\n   {storage_dir}\n"
+            f" • Your attachments are saved in:\n   {attachments_dir}\n"
             "For further assistance or to report issues, please contact the developer."
         )
         text = tk.Text(
@@ -1031,12 +1029,7 @@ class PatientApp:
         scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
 
     def show_license(self) -> None:
-        """Display the contents of LICENSE.txt in a pop‑up window.
 
-        This method reads the LICENSE file located in the same directory as
-        this script and shows its text in a scrollable window. If the file
-        cannot be found, an error message is displayed to the user.
-        """
         # Determine the path to the license file
         license_path = os.path.join(BASE_DIR, "LICENSE.txt")
         if not os.path.exists(license_path):
@@ -1066,13 +1059,7 @@ class PatientApp:
         scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
 
     def show_acknowledgments(self) -> None:
-        """Display the contents of the acknowledgment file in a pop‑up window.
 
-        This method reads the acknowledgment file (acknowledgment_gdf_donation.txt)
-        located in the same directory as this script and shows its text in a
-        scrollable window. If the file cannot be found, an error message is
-        displayed to the user.
-        """
         ack_path = os.path.join(BASE_DIR, "acknowledgment_gdf_donation.txt")
         if not os.path.exists(ack_path):
             messagebox.showerror("Acknowledgments Not Found", "The acknowledgment file could not be located.")
@@ -1096,13 +1083,6 @@ class PatientApp:
         text_widget.configure(yscrollcommand=scrollbar.set)
         scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
 
-# --- Other Classes (PatientDetailWindow, AttachmentWindows, EditWindows) ---
-# These remain the same as the previous correct version (v7 / Gait_Documentation.py)
-# Make sure their layouts also use grid configure for expansion and button placement if needed.
-# (Assuming PatientDetailWindow, AttachmentWindowBase, EditPatientWindow,
-#  EditEventWindowBase and subclasses are defined as in the v7 script provided previously,
-#  ensuring they use grid row/column configure where appropriate for resizing and
-#  that messageboxes specify parent=self)
 
 class PatientDetailWindow(tk.Toplevel):
     """Window to display and manage examinations and interventions for a single patient.
@@ -1838,7 +1818,10 @@ class AttachmentWindowBase(tk.Toplevel):
             # program code (and eventual executable) and are kept together when
             # the application folder is moved.  See the BASE_DIR constant at
             # the top of the file for its definition.
-            base_dir = Path(BASE_DIR)
+            # base_dir = Path(BASE_DIR)
+
+            data_root = Path(self.db.db_path).parent
+
             sub = "exams" if self.event_type == "Exam" else "interventions"
             # Build a meaningful folder hierarchy for attachments.  Include
             # the patient identifier (patient_code if available, otherwise the
@@ -1873,10 +1856,15 @@ class AttachmentWindowBase(tk.Toplevel):
             else:
                 patient_code = "unknown"
             # Use the event date (YYYY‑MM‑DD) or a placeholder if unavailable
+           
+           
             date_part = event_date if event_date else "unknown_date"
-            attachments_dir = base_dir / "attachments" / sub / patient_code / date_part
+            attachments_dir = data_root / "attachments" / sub / patient_code / date_part
             attachments_dir.mkdir(parents=True, exist_ok=True)
             dest_path = attachments_dir / os.path.basename(file_path)
+
+
+            
             # Ensure unique filename to avoid overwriting existing files
             if dest_path.exists():
                 stem = dest_path.stem

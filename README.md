@@ -1,9 +1,11 @@
-# Gait Documentation App (Version 1.1)
+# Gait Documentation App (Version 1.0)
 ## 1) Overview
 **Gait Documentation App** is free, open-source software for clinical documentation (GNU GPLv3). It provides an intuitive interface to record **patient information**, **examinations**, **interventions**, and **associated files**. The app is offered in two formats: **an installable version** and **a portable (no‑install) version**.
 
 **Safe Download link**:
+https://heibox.uni-heidelberg.de/d/a413ae20c2a34b398926/
 
+<img width="128" height="128" alt="Install_QR" src="https://github.com/user-attachments/assets/be81a3ca-a4b4-43a8-b385-bb0f68366038" />
 
 
 ## 2) Key Features
@@ -78,12 +80,12 @@
 - This program is provided **“AS IS,”** without warranty of any kind.
 
 ## 10) Acknowledgments and Donations
-- We gratefully acknowledge the support of the **Gesellschaft der Freunde der Universität Heidelberg e.V. (Society of Friends of Heidelberg University)**.  
+- I gratefully acknowledge the support of the **Gesellschaft der Freunde der Universität Heidelberg e.V. (Society of Friends of Heidelberg University)**.  
 - This app is free to use. If it helps your work, please consider a donation to support students and early‑career researchers:  
   **Recipient:** Gesellschaft der Freunde der Universität Heidelberg e.V.  
   **Bank:** Deutsche Bank Heidelberg  
-  **IBAN:** `DE22 6727 0003 0049 4005 00`  
-  **BIC (SWIFT):** `DEUTDESM672`  
+  **IBAN:** DE22 6727 0003 0049 4005 00  
+  **BIC (SWIFT):** DEUTDESM672  
   **Reference (optional):** *Spende – Förderung Studierende/Promotion*
 
 ---

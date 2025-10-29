@@ -4,11 +4,6 @@
 
 **Safe Download link**:
 
-Portable:
-https://heibox.uni-heidelberg.de/f/94649ebd1b4b4ee39a02/ 
-
-Installable:
-https://heibox.uni-heidelberg.de/f/bb2d7a8aa01448d1835d/ 
 
 
 ## 2) Key Features

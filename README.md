@@ -89,7 +89,7 @@ https://heibox.uni-heidelberg.de/f/bb2d7a8aa01448d1835d/
   **Bank:** Deutsche Bank Heidelberg  
   **IBAN:** `DE22 6727 0003 0049 4005 00`  
   **BIC (SWIFT):** `DEUTDESM672`  
-  **Reference (optional):** *Spende – Förderung Studierende/Promotion*
+  **Reference (optional):** *Davoudi App Donation*
 
 ---
 
